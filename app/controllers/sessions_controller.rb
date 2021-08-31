@@ -1,7 +1,9 @@
+# frozen_string_literal: true
+
 class SessionsController < ApplicationController
   def new
   end
-  
+
   def create
     user = User.find_by(email: params[:email])
 
@@ -20,8 +22,7 @@ class SessionsController < ApplicationController
   end
 
   private
-  def create_params
-    params.permit(:email,:password)
-  end
+    def create_params
+      params.permit(:email, :password)
+    end
 end
-

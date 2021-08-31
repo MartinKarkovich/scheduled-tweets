@@ -2,7 +2,6 @@
 <h1>Welcome To Scheduled Tweets</h1>
 </div>
 
-<% if @user %>
-  Logged in as: <%= @user.email %>
-  <%= button_to "Sign Out", sign_out_path, method: :delete %>
+<% if Current.user %>
+  <%= button_to "Connect Twitter", "/auth/twitter", method: :post, class: "btn btn-primary" %>
 <% end %>
