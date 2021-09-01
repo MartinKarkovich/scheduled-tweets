@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class PasswordsController < ApplicationController
   before_action :require_user_logged_in!
 
@@ -12,7 +14,7 @@ class PasswordsController < ApplicationController
   end
 
   private
-  def update_params
-    params.require(:user).permit(:password, :password_confirmation)
-  end
+    def update_params
+      params.require(:user).permit(:password, :password_confirmation)
+    end
 end
