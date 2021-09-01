@@ -2,7 +2,7 @@
 
 require "test_helper"
 
-class TwitterAccountTest < ActiveSupport::TestCase
+class TweetTest < ActiveSupport::TestCase
   # test "the truth" do
   #   assert true
   # end

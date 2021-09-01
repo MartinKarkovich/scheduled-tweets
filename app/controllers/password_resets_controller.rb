@@ -1,7 +1,9 @@
+# frozen_string_literal: true
+
 class PasswordResetsController < ApplicationController
   def new
   end
-  
+
   def create
     @user = User.find_by_email(params[:email])
 
@@ -11,7 +13,6 @@ class PasswordResetsController < ApplicationController
     end
 
     redirect_to root_path, notice: "If an account with that email exists, we have sent an email to reset the password"
-
   end
 
   def edit
@@ -30,7 +31,7 @@ class PasswordResetsController < ApplicationController
   end
 
   private
-  def password_params
-    params.require(:user).permit(:password,:password_confirmation)
-  end
+    def password_params
+      params.require(:user).permit(:password, :password_confirmation)
+    end
 end
